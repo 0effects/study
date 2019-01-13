@@ -15,6 +15,7 @@ Chapter 3: 2019-01-13
 Chapter 4: 2019-01-13
 Chapter 5: 2019-01-13
 Chapter 6: 2019-01-13
+Chapter 7: 2019-01-13
 
 - Haskell Programming From First Principles
 
