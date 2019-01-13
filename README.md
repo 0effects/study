@@ -7,11 +7,23 @@
 Goal:  Complete all exercises in book.  Use discretion for what to actually read.
 Accomplished:
 
-Exercises Chapters 1-5 Completed: 2019-01-13
+Completed Chapters
+------------------
+Chapter 1: 2019-01-13
+Chapter 2: 2019-01-13
+Chapter 3: 2019-01-13
+Chapter 4: 2019-01-13
+Chapter 5: 2019-01-13
+Chapter 6: 2019-01-13
 
 - Haskell Programming From First Principles
 
 Goal: Read and complete all exercises in book, but skip over the really boring stuff.
 Accomplished: 
 
-Read and Exercises 1-4.6 Completed: 2019-01-01 -> 2019-01-13
+Completed Chapters
+------------------
+Chapter 1: 2019-01-xx
+Chapter 2: 2019-01-xx
+Chapter 3: 2019-01-xx
+Chapter 4: From 4.1 - 4.6

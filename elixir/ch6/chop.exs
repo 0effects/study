@@ -1,5 +1,10 @@
 # Exercise: ModulesAndFunctions-6
 defmodule Chop do
+  @color "Blue"
+  def get_color do
+    @color
+  end
+
   def guess(actual, min..max) do
     myguess = div((min + max), 2)
     IO.puts "Is it #{myguess}"
