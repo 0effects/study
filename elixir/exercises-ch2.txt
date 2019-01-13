@@ -1,0 +1,50 @@
+Chapter 2.
+
+PatternMatching-1
+=================
+a = [1, 2, 3]
+	- Valid
+a = 4
+	- Valid
+4 = a
+	- Valid
+[a, b] = [ 1, 2, 3 ]
+	- Invalid
+a = [ [ 1, 2, 3 ] ]
+	- Valid
+[a] = [ [ 1, 2, 3 ] ]
+	- Valid
+[[a]] = [ [ 1, 2, 3 ] ]
+	- Invalid
+
+PatternMatching-2
+=================
+[ a, b, a ] = [ 1, 2, 3 ]
+	- Invalid
+[ a, b, a ] = [ 1, 1, 2 ]
+	- Invalid
+[ a, b, a ] = [ 1, 2, 1 ]
+	- Valid
+
+PatternMatching-3
+=================
+
+Assuming a is already bound to 2.
+a = 2
+[ a, b, a ] = [ 1, 2, 3 ]
+	- Invalid (1 and 3 are different)
+a = 2
+[ a, b, a ] = [ 1, 1, 2 ]
+	- Invalid (1 and 2 are different)
+a = 2
+a = 1
+	- Valid (will rebind a)
+a = 2
+^a = 2
+	- Valid (Matches existing value)
+a = 2
+^a = 1
+	- Invalid (Existing value does not match)
+a = 2
+^a = 2 - a
+	- Invalid (Existing value does not match)

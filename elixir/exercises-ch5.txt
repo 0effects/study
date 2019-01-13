@@ -1,0 +1,75 @@
+Functions-1
+===========
+
+Go into IEx. Create and run the functions that do the following:
+
+PROBLEM:
+list_concat.([:a,:b], [:c, :d]) #=> [:a, :b, :c, :d]
+sum.(1,2, 3) #=> 6
+pair_tuple_to_list.({ 1234, 5678 } ) #=> [ 1234, 5678 ]
+
+ANSWERS:
+list_concat = fn( [x1, x2], [x3, x4] ) -> [x1, x2, x3, x4] end
+sum = fn(x1, x2, x3) -> x1 + x2 + x3 end
+pair_tuple_to_list = fn({ x1, x2 }) -> [x1, x2] end
+
+Functions-2
+===========
+Write  a  function  that  takes  three  arguments.  If  the  first  two  are  zero,return “FizzBuzz.” If the first is zero, return “Fizz.” If the second is zero,return “Buzz.” Otherwise return the third argument. Do not use any lan-guage features that we haven’t yet covered in this book.
+
+fizz_buzz = fn
+  0, 0, _ -> "FizzBuzz"
+  0, _, _ -> "Fizz"
+  _, 0, _ -> "Buzz"
+  _, _, x -> x
+end
+
+INPUT:
+fizz_buzz.(0, 0, 90)
+fizz_buzz.(0, 90, 90)
+fizz_buzz.(90, 0, 90)
+fizz_buzz.(1, 2, 3)
+
+EXPECTED OUTPUT:
+FizzBuzz
+Fizz
+Buzz
+3
+
+ACTUAL OUTPUT:
+iex(88)> fizz_buzz.(0, 0, 90)
+"FizzBuzz"
+iex(89)> fizz_buzz.(0, 90, 90)
+"Fizz"
+iex(90)> fizz_buzz.(90, 0, 90)
+"Buzz"
+iex(91)> fizz_buzz.(1, 2, 3)
+3
+
+Functions-3
+===========
+The operator rem(a, b) returns the remainder after dividing a by b. Write afunction that takes a single integer (n) and calls the function in the previ-ous exercise, passing it rem(n,3), rem(n,5), and n. Call it seven times withthe arguments 10, 11, 12, and so on. You should get “Buzz, 11, Fizz, 13,14, FizzBuzz, 16.”
+
+fizz_buzz_int = fn
+  0, 0, _ -> "FizzBuzz"
+  0, _, _ -> "Fizz"
+  _, 0, _ -> "Buzz"
+  _, _, x -> x
+end
+
+fizz_buzz = fn x -> fizz_buzz_int.( rem(x,3), rem(x,5), x ) end
+
+10..16 |> Enum.map( fn(x) -> fizz_buzz.(x) end )
+
+# ["Buzz", 11, "Fizz", 13, 14, "FizzBuzz", 16]
+
+Functions-4
+===========
+prefix = fn(initial_string) -> (fn (second_string) -> initial_string <> " " <> second_string end) end
+
+Functions-5
+===========
+- Enum.map [1,2,3,4], &(&1 + 2)
+- Enum.each [1, 2, 3, 4], &IO.inspect/1
+
+
