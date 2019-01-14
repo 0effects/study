@@ -47,7 +47,7 @@ defmodule Exercises do
     take(list, num, 0)
   end
 
-  def take([head | tail], num, i) when i >= num do
+  def take(_list, num, i) when i >= num do
     []
   end
   def take([head | tail], num, i) do
@@ -64,4 +64,28 @@ defmodule Exercises do
   def flatten([]) do
     []
   end
+
+  ## ListsAndRecursion7 BEGIN
+  def span(from, to) when from < to do
+    [ from | span(from + 1, to) ]
+  end
+
+  def span(from, to) when from >= to do
+    [from]
+  end
+
+  def primeToN(n) do
+    for x <- span(2, n), is_prime(x), do: x
+  end
+
+  def is_prime(x), do: is_prime(x, div(x, 2))
+  defp is_prime(_x, 1), do: true
+  defp is_prime(x, divisor) do
+    if rem(x, divisor) == 0 do
+      false
+    else
+      is_prime(x, divisor-1)
+    end
+  end
+  ## ListsAndRecursion7 END
 end
