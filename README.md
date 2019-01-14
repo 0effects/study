@@ -16,6 +16,9 @@ Chapter 4: 2019-01-13
 Chapter 5: 2019-01-13
 Chapter 6: 2019-01-13
 Chapter 7: 2019-01-13
+Chapter 8: 2019-01-13
+Chapter 9: 2019-01-13
+Chapter 10: Partial.  Pick up on "Streams - Lazy Enumerables". Page 103 (book notation)
 
 - Haskell Programming From First Principles
 
