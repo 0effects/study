@@ -19,8 +19,7 @@ Chapter 7: 2019-01-13
 Chapter 8: 2019-01-13
 Chapter 9: 2019-01-13
 Chapter 10: 2019-01-13
-Chatper 11:
-    - All except Exercises StringsAndBinaries-6 and StringsAndBinaries-7
+Chapter 11: 2019-01-14
 
 - Haskell Programming From First Principles
 

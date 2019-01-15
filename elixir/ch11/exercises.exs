@@ -34,4 +34,16 @@ defmodule Exercises do
     indent = String.duplicate(" ", indent_n)
     IO.puts (indent <> string)
   end
+
+  # StringsAndBinaries-6
+  def capitalize_sentences(input) do
+    input 
+    |> String.split(". ") 
+    |> Enum.map( fn x -> String.capitalize(x) end ) 
+    |> Enum.join(". ")
+  end
+
+  # StringsAndBinaries-7
+  def ex7 do
+  end
 end
