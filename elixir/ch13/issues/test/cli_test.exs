@@ -10,7 +10,7 @@ defmodule CliTest do
   end
 
   test "parsing three options returns those three" do
-    assert parse_args(["user1", "project2", 99]) == {"user1", "project2", 99}
+    assert parse_args(["user1", "project2", "99"]) == {"user1", "project2", 99}
   end
 
   test "parsing two options returns them and a default count" do
