@@ -1,10 +1,13 @@
 defmodule Issues.CLI do
+  import Issues.TableFormatter, only: [print_table_for_columns: 2]
+
   @default_count 4
   @moduledoc """
   Handle the command line parsing and dispatch to
   the various functions that end up generating a
   table of the last _n_ issues in a github project
   """
+
   def run(argv) do
     argv
     |> parse_args
@@ -24,7 +27,7 @@ defmodule Issues.CLI do
     |> decode_response()
     |> sort_into_desc_order()
     |> last(count)
-    |> IO.inspect()
+    |> print_table_for_columns(~w[number created_at title])
   end
 
   def last(list, count) do
