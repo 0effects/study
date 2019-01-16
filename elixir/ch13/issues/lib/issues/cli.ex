@@ -1,5 +1,5 @@
 defmodule Issues.CLI do
-  @default_count 4 
+  @default_count 4
   @moduledoc """
   Handle the command line parsing and dispatch to
   the various functions that end up generating a
@@ -18,10 +18,13 @@ defmodule Issues.CLI do
   Returns a tuple of `{user, project, count}` or `:help` if help was requested.
   """
   def parse_args(argv) do
-    OptionParser.parse(argv, switches: [ help: :boolean], 
-                             aliases:  [ h:    :help])
-     |> elem(1)
-     |> args_to_internal_rep()
+    argv
+    |> OptionParser.parse(
+      switches: [help: :boolean],
+      aliases: [h: :help]
+    )
+    |> elem(1)
+    |> args_to_internal_rep()
   end
 
   def args_to_internal_rep([user, project, count]) do
