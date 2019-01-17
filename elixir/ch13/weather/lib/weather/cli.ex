@@ -1,4 +1,5 @@
 defmodule Weather.CLI do
+  import Weather.Formatter, only: [print_columns: 2]
   @default_station "KDTO"
 
   @moduledoc """
@@ -23,8 +24,9 @@ defmodule Weather.CLI do
   end
 
   def process({station_code}) do
-    Weather.WeatherGov.fetch(station_code)
-    |> IO.inspect()
+    station_code
+    |> Weather.WeatherGov.fetch()
+    |> print_columns(~w[temperature_string location weather wind_string])
   end
 
   def parse_args(argv) do
