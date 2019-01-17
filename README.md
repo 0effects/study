@@ -21,8 +21,7 @@ Chapter 9: 2019-01-13
 Chapter 10: 2019-01-13
 Chapter 11: 2019-01-14
 Chapter 12: 2019-01-14
-Chapter 13:
-    - Made it up to "Big Function Alert"
+Chapter 13: 2019-01-15
 
 - Haskell Programming From First Principles
 
