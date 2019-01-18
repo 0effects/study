@@ -1,0 +1,6 @@
+PragDave seems to be adding a "component" system, which lets multiple
+mix projects coordinate with each other.
+  - Intro Video: https://vimeo.com/311786532
+  - FAQ on State: https://pragdave.me/blog/2019/01/10/where-does-state-live.html
+  - https://pragdave.me/blog/2019/01/07/component-library.html
+  - https://github.com/pragdave/component
