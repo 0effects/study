@@ -4,3 +4,5 @@ mix projects coordinate with each other.
   - FAQ on State: https://pragdave.me/blog/2019/01/10/where-does-state-live.html
   - https://pragdave.me/blog/2019/01/07/component-library.html
   - https://github.com/pragdave/component
+
+LiveGrep https://github.com/livegrep/livegrep is an extremely useful tool
